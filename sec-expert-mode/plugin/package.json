@@ -1,0 +1,23 @@
+{
+  "name": "dsh-sec-expert-mode",
+  "version": "1.0.0",
+  "private": true,
+  "description": "网安专家模式 (Security Expert Mode) — 高爆发多 Agent 并行漏洞挖掘、情报交叉比对与验证型 PoC 编排",
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}
